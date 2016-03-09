@@ -86,9 +86,9 @@ module Git
       
       def blob(type = :dst)
         if type == :src
-          @base.object(@src) if @src != '0000000'
+          @base.object(@src) if @src != '0000000000000000000000000000000000000000'
         else
-          @base.object(@dst) if @dst != '0000000'
+          @base.object(@dst) if @dst != '0000000000000000000000000000000000000000'
         end
       end
     end
